@@ -37,6 +37,13 @@ impl Config {
             use_flash_attn,
         }
     }
+
+    pub fn with_custom_vocab_size(&self, vocab_size: usize) -> Self {
+        Self {
+            vocab_size,
+            ..self.clone()
+        }
+    }
 }
 
 #[derive(Debug, Clone)]
